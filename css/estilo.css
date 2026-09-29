@@ -1,0 +1,465 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background:
+        radial-gradient(circle at 50% 35%, #50153e 0%, #261027 45%, #100d19 100%);
+    color: white;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.page {
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    min-height: 100vh;
+    padding-bottom: 80px;
+}
+
+/* Logo */
+.logo-area {
+    height: 145px;
+    display: flex;
+    align-items: center;
+    padding: 30px 45px;
+    border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+.logo {
+    font-size: 36px;
+    filter: drop-shadow(0 0 10px #ff4c91);
+}
+
+.logo-text {
+    font-size: 11px;
+    margin-top: 3px;
+    color: #ddd;
+}
+
+/* Customers */
+.customers {
+    width: 78%;
+    margin: 48px auto 42px;
+    padding: 17px 20px;
+    border-radius: 40px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+    color: #bcb0dc;
+    border: 1px solid rgba(255,255,255,.18);
+    background: rgba(255,255,255,.08);
+    box-shadow: inset 0 0 20px rgba(255,255,255,.025);
+}
+
+/* Hero */
+.hero {
+    text-align: center;
+    padding: 0 30px;
+}
+
+.hero h1 {
+    font-size: clamp(48px, 7vw, 76px);
+    line-height: .98;
+    letter-spacing: -3px;
+    font-weight: 800;
+}
+
+.gradient-text {
+    display: block;
+    background: linear-gradient(
+        90deg,
+        #a24cff,
+        #ef49a5,
+        #ff7941
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.subtitulo {
+    max-width: 750px;
+    margin: 38px auto 45px;
+    color: #b9add5;
+    font-size: 22px;
+    line-height: 1.55;
+    font-weight: 500;
+}
+
+/* Instagram phone */
+.phone {
+    width: 470px;
+    max-width: 88vw;
+    height: 680px;
+    margin: auto;
+    border: 14px solid #292929;
+    border-radius: 75px;
+    background: #101010;
+    box-shadow:
+        0 0 0 2px #171717,
+        0 30px 70px rgba(0,0,0,.45);
+    padding: 38px 30px;
+    position: relative;
+}
+
+.phone::before {
+    content: "";
+    width: 135px;
+    height: 25px;
+    background: #1d1d1d;
+    border-radius: 30px;
+    position: absolute;
+    top: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.instagram-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 28px;
+    font-size: 22px;
+}
+
+.instagram-name {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.menu {
+    font-size: 31px;
+}
+
+/* Profile */
+.profile {
+    margin-top: 32px;
+}
+
+.profile-row {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.avatar {
+    width: 110px;
+    height: 110px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background:
+        linear-gradient(#111,#111) padding-box,
+        linear-gradient(135deg,#8b46ff,#ff347d,#ff7045) border-box;
+    border: 6px solid transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.avatar-icon {
+    width: 38px;
+    height: 38px;
+    background: #eee;
+    border-radius: 50%;
+    position: relative;
+}
+
+.avatar-icon::after {
+    content: "";
+    position: absolute;
+    width: 62px;
+    height: 34px;
+    background: #eee;
+    border-radius: 50px 50px 20px 20px;
+    left: 50%;
+    bottom: -27px;
+    transform: translateX(-50%);
+}
+
+.stats {
+    display: flex;
+    gap: 18px;
+    text-align: center;
+}
+
+.stat strong {
+    display: block;
+    font-size: 28px;
+}
+
+.stat span {
+    display: block;
+    margin-top: 8px;
+    color: #999;
+    font-size: 15px;
+}
+
+/* Bio */
+.bio {
+    text-align: left;
+    margin-top: 30px;
+}
+
+.bio h2 {
+    font-size: 25px;
+    margin-bottom: 12px;
+}
+
+.bio p {
+    color: #b9b9b9;
+    font-size: 18px;
+    line-height: 1.55;
+}
+
+/* Buttons */
+.buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.seguir {
+    flex: 1;
+    border: 0;
+    border-radius: 15px;
+    padding: 16px;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    background: linear-gradient(90deg,#a746e9,#ff6c43);
+}
+
+.message {
+    flex: 1;
+    border: 0;
+    border-radius: 15px;
+    padding: 16px;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    background: #303030;
+}
+
+.more {
+    width: 58px;
+    border: 0;
+    border-radius: 15px;
+    background: #303030;
+    color: white;
+    font-size: 22px;
+}
+
+/* Highlights */
+.highlights {
+    display: flex;
+    gap: 22px;
+    margin-top: 28px;
+    overflow: hidden;
+}
+
+.highlight {
+    text-align: center;
+    min-width: 75px;
+}
+
+.highlight-circle {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    padding: 3px;
+    background: linear-gradient(135deg,#ff7043,#f13791,#a64cff);
+}
+
+.highlight-inner {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+}
+
+.highlight span {
+    display: block;
+    margin-top: 7px;
+    font-size: 13px;
+    color: #aaa;
+}
+
+/* Followers bar */
+.followers {
+    width: 94%;
+    margin: 55px auto 45px;
+    padding: 27px 32px;
+    border: 1px solid rgba(255,255,255,.12);
+    border-radius: 25px;
+    background: rgba(10,10,20,.5);
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.chart {
+    font-size: 40px;
+}
+
+.seguidores-c {
+    flex: 1;
+}
+
+.seguidores_l {
+    color: #aaa0c8;
+    font-size: 21px;
+    font-weight: 700;
+    margin-bottom: 13px;
+}
+
+.progress {
+    width: 100%;
+    height: 10px;
+    background: #242338;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.progress::before {
+    content: "";
+    display: block;
+    width: 72%;
+    height: 100%;
+    border-radius: inherit;
+    background: linear-gradient(90deg,#934cff,#b83ebd,#ff6c3d);
+}
+
+.numero_seguidores {
+    font-size: 32px;
+    font-weight: 800;
+}
+
+/* Bottom */
+.opciones {
+    text-align: center;
+    padding: 0 25px;
+}
+
+.opciones h2 {
+    font-size: 34px;
+    margin-bottom: 22px;
+}
+
+.opciones p {
+    color: #b5a9d1;
+    font-size: 21px;
+    line-height: 1.5;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+
+    .logo-area {
+        height: 145px;
+        padding: 30px 48px;
+    }
+
+    .customers {
+        width: 80%;
+        margin-top: 48px;
+        font-size: 16px;
+        padding: 15px 12px;
+        white-space: nowrap;
+    }
+
+    .hero {
+        padding: 0 25px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+        letter-spacing: -2px;
+    }
+
+    .subtitle {
+        font-size: 18px;
+        margin-top: 35px;
+    }
+
+    .phone {
+        height: 680px;
+        width: 460px;
+        max-width: 100%;
+        border-radius: 65px;
+        padding: 35px 25px;
+    }
+
+    .profile-row {
+        gap: 14px;
+    }
+
+    .avatar {
+        width: 95px;
+        height: 95px;
+    }
+
+    .stats {
+        gap: 11px;
+    }
+
+    .stat strong {
+        font-size: 22px;
+    }
+
+    .stat span {
+        font-size: 12px;
+    }
+
+    .bio h2 {
+        font-size: 21px;
+    }
+
+    .bio p {
+        font-size: 15px;
+    }
+
+    .seguidores {
+        width: 94%;
+        padding: 22px 18px;
+        gap: 15px;
+    }
+
+    .chart {
+        font-size: 32px;
+    }
+
+    .seguidores_l {
+        font-size: 15px;
+    }
+
+    .numero_seguidores {
+        font-size: 25px;
+    }
+
+    .opciones h2 {
+        font-size: 27px;
+    }
+
+    .opciones p {
+        font-size: 17px;
+    }
+    .promociones {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+    .img {
+      width: 200px;
+      height: auto;
+    }
+    
+}
